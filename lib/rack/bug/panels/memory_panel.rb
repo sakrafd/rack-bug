@@ -14,14 +14,12 @@ module Rack
       end
 
       def heading
-        "#{@memory_increase} KB &#916;, #{@total_memory} KB total"
+        "&nbsp;#{@memory_increase.to_s.gsub(/(\d)(?=\d{3}+(\.\d*)?$)/, '\1,')} KB &#916;; #{@total_memory.to_s.gsub(/(\d)(?=\d{3}+(\.\d*)?$)/, '\1,')} KB total"
       end
 
       def has_content?
         false
       end
-
     end
-
   end
 end
