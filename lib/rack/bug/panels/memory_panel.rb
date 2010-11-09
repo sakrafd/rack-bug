@@ -14,11 +14,17 @@ module Rack
       end
 
       def heading
-        "&nbsp;#{@memory_increase.to_s.gsub(/(\d)(?=\d{3}+(\.\d*)?$)/, '\1,')} KB &#916;; #{@total_memory.to_s.gsub(/(\d)(?=\d{3}+(\.\d*)?$)/, '\1,')} KB total"
+        "&nbsp;#{humanize(@memory_increase)} KB &#916;; #{humanize(@total_memory)} KB total"
       end
 
       def has_content?
         false
+      end
+
+      private
+
+      def humanize(memory)
+        memory.to_s.gsub(/(\d)(?=\d{3}+(\.\d*)?$)/, '\1,')
       end
     end
   end
