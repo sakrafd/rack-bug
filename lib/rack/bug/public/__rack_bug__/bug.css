@@ -169,6 +169,7 @@
   background: #fff;
   color: #000;
   vertical-align: top;
+  text-align: left;
 }
 #rack_bug .panel_content table tr.odd td {
   background: #eee;
