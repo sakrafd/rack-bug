@@ -139,8 +139,13 @@
   background-color: #fff;
 }
 
+#rack_bug .panel_content ul li {
+  text-align: left;
+}
+
 #rack_bug .panel_content ul ul {
   padding: 0;
+  margin-left:15px;
 }
 
 #rack_bug .panel_content table {
